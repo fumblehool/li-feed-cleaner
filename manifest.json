@@ -1,0 +1,13 @@
+{
+    "name": "LI feed cleaner",
+    "version": "1.0",
+    "description": "Chrome extension to remove `someone likes this` content from feed",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://www.linkedin.com/feed/"],
+            "run_at": "document_idle",
+            "js": ["feedCleaner.js"]
+        }
+    ]
+}
